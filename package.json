@@ -1,0 +1,31 @@
+{
+  "name": "zachkohl",
+  "version": "1.0.0",
+  "description": "my personal website",
+  "main": "index.js",
+  "dependencies": {
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachkohl/zachkohl.git"
+  },
+  "author": "zach kohl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachkohl/zachkohl/issues"
+  },
+  "homepage": "https://github.com/zachkohl/zachkohl#readme"
+}
