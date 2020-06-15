@@ -6,6 +6,7 @@ import "intersection-observer";
 import scrollama from "scrollama";
 import ChangeColor from "./ChangeColor";
 import Scrolly from "./Scrolly";
+import MapBox from "./MapBox";
 function Home(props) {
   const [currentIndex, setCurrentIndex] = useState(null);
 
@@ -19,7 +20,9 @@ function Home(props) {
             setCurrentIndex={setCurrentIndex}
           />
         </div>
-        <div className={styles.rightSideBar}></div>
+        <div className={styles.rightSideBar}>
+          <MapBox />
+        </div>
       </div>
     </div>
   );

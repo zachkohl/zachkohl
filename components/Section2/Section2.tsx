@@ -39,8 +39,7 @@ function Section2(props) {
         {`
           #AdventureInEngineering {
             transform: rotate(${titleRotate}turn);
-            transform-origin: top right;
-            margin-right: 55px;
+            transform-origin: bottom right;
             float: right;
           }
         `}
