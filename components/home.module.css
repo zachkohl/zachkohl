@@ -1,0 +1,57 @@
+.home {
+  background-color: white;
+  height: 100%;
+  display: grid;
+}
+
+.header {
+  background-color: blue;
+}
+
+.contentArea {
+  background-color: red;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 10fr 1fr;
+}
+
+.bigArea {
+  background-color: white;
+}
+
+.rightSideBar {
+  background-color: green;
+}
+
+.footer {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+#scrolly {
+  position: relative;
+}
+
+.step {
+  margin: 2rem auto 4rem auto;
+  background-color: #3b3b3b;
+  color: #fff;
+}
+
+.is-active {
+  background-color: black;
+  color: #3b3b3b;
+}
+
+.step p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}

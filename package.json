@@ -6,9 +6,12 @@
   "dependencies": {
     "@types/node": "^14.0.13",
     "@types/react": "^16.9.36",
+    "intersection-observer": "^0.10.0",
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-scrollama": "^2.2.10",
+    "scrollama": "^2.2.1",
     "typescript": "^3.9.5"
   },
   "devDependencies": {},

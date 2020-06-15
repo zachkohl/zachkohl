@@ -1,7 +1,9 @@
 import React from "react";
+import dynamic from "next/dynamic";
+const Home = dynamic(() => import("../components/Home"), { ssr: false });
 
 function HomePage(props) {
-  return <div>welcome to Zach Kohl.com!</div>;
+  return <Home />;
 }
 
 export default HomePage;
