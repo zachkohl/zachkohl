@@ -8,8 +8,6 @@ import ChangeColor from "./ChangeColor";
 function Scrolly(props) {
   const [progress, setProgress] = useState(null);
   useEffect(() => {
-    console.log("initial mount");
-
     var scrolly = document.querySelector("#scrolly");
     var article = scrolly.querySelector("article");
     var step = article.querySelectorAll(".step");
@@ -20,19 +18,17 @@ function Scrolly(props) {
     // scrollama event handlers
     function handleStepEnter(response) {
       // response = { element, direction, index }
-      console.log(response);
+
       // add to color to current step
       props.setCurrentIndex(response.index);
     }
 
     function handleStepProgress(response) {
-      console.log(response);
       setProgress(response.progress);
     }
 
     function handleStepExit(response) {
       // response = { element, direction, index }
-      console.log(response);
     }
 
     function init() {
