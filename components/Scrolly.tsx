@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from "react";
 import styles from "./home.module.css";
-import Section1 from "./Section1/Section1";
+import Section1 from "./s1_welcome";
 import Section2 from "./Section2/Section2";
 import "intersection-observer";
 import scrollama from "scrollama";
 import ChangeColor from "./ChangeColor";
+import TitleAnimator from "./TitleAnimator";
+import S1_welcome from "./s1_welcome";
+import S2_move_out_west from "./s2_move_out_west";
+import S3_military_service from "./s3_military_service";
+import S4_afghanistan from "./s4_afghanistan";
+import S5_playing_jounalist from "./s5_playing_journalist";
+import S6_adventures_in_engineering from "./s6_adventures_in_engineering";
+import S7_expeditors from "./s7_expeditors";
+import MapMover from "./MapMover";
 function Scrolly(props) {
   const [progress, setProgress] = useState(null);
   useEffect(() => {
@@ -45,7 +54,7 @@ function Scrolly(props) {
         .setup({
           step: "#scrolly article .step",
           debug: true,
-          offset: 0.5,
+          offset: 0.9,
           progress: true,
         })
         .onStepEnter(handleStepEnter)
@@ -71,23 +80,53 @@ function Scrolly(props) {
       <section id="scrolly">
         <article>
           <div className="step" data-step="1">
-            <Section1 />
+            <S1_welcome
+              currentIndex={props.currentIndex}
+              index={1}
+              progress={progress}
+              title="welcome"
+            />
           </div>
           <div className="step" data-step="2"></div>
-          <Section2
+          <S2_move_out_west
             currentIndex={props.currentIndex}
             index={2}
             progress={progress}
+            title="welcome"
           />
 
           <div className="step" style={{ height: "100vh" }} data-step="3"></div>
-          <ChangeColor currentIndex={props.currentIndex} index={2} />
-          <p>STEP 3</p>
+          <S3_military_service
+            currentIndex={props.currentIndex}
+            index={3}
+            progress={progress}
+          />
+          <div className="step" style={{ height: "100vh" }} data-step="4"></div>
+          <S4_afghanistan
+            currentIndex={props.currentIndex}
+            index={4}
+            progress={progress}
+          />
+          <div className="step" style={{ height: "100vh" }} data-step="5"></div>
+          <S5_playing_jounalist
+            currentIndex={props.currentIndex}
+            index={5}
+            progress={progress}
+          />
+          <div className="step" style={{ height: "100vh" }} data-step="6"></div>
+          <S6_adventures_in_engineering
+            currentIndex={props.currentIndex}
+            index={6}
+            progress={progress}
+          />
 
-          <div className="step" style={{ height: "100vh" }} data-step="4">
-            <ChangeColor currentIndex={props.currentIndex} index={3} />
-            <p>STEP 4</p>
-          </div>
+          <div className="step" style={{ height: "100vh" }} data-step="7"></div>
+          <S7_expeditors
+            currentIndex={props.currentIndex}
+            index={7}
+            progress={progress}
+          />
+          <div className="step" style={{ height: "100vh" }} data-step="8"></div>
         </article>
       </section>
     </div>

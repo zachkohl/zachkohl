@@ -1,15 +1,6 @@
 import React, { useEffect, useRef, useState, useContext } from "react";
-import homeStyles from "../home.module.css";
-import styles from "./section2.module.css";
-import { MapContext } from "../Home";
-function Section2(props) {
-  const [titleRotate, setTitleRotate] = useState(-0.25);
-
-  // useEffect(() => {
-  //   const d3thing = d3.select(d3Element.current);
-  //   const update = d3thing.attr("transform", "translate(0,10)");
-  // });
-
+import { MapContext } from "./Home";
+function MapMover(props) {
   var easingFunctions = {
     // start slow and gradually increase speed
     easeInCubic: function (t) {
@@ -50,21 +41,6 @@ function Section2(props) {
     essential: true, // animation will happen even if user has `prefers-reduced-motion` setting on
   };
 
-  useEffect(() => {
-    //calculate the title location.
-    if (props.currentIndex === props.index) {
-      const rotateValue = props.progress - 1.25;
-      console.log(rotateValue);
-      if (rotateValue < -1) {
-        setTitleRotate(rotateValue);
-      } else {
-        setTitleRotate(0);
-      }
-    } else {
-      setTitleRotate(-0.25);
-    }
-  }, [props.progress]);
-
   function easeInCubic(t) {
     return t * t * t;
   }
@@ -103,11 +79,9 @@ function Section2(props) {
     }
   }, [props.currentIndex]);
 
-  const myStyle =
-    props.currentIndex === props.index ? homeStyles.red : homeStyles.blue;
-  return <div></div>;
+  return <span></span>;
 }
 
-export default Section2;
+export default MapMover;
 //https://medium.com/@jeffbutsch/using-d3-in-react-with-hooks-4a6c61f1d102
 //https://wattenberger.com/blog/d3#dealing-with-colors

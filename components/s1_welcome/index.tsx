@@ -1,8 +1,20 @@
-import React from "react";
-import styles from "../home.module.css";
-function Section1(props) {
+import React, { useState, useEffect } from "react";
+import styles from "./styles.module.css";
+
+import useMoveMap from "../useMoveMap";
+
+function Index(props) {
+  const [passed, setPassed] = useState(false);
+
+  const moveMap = useMoveMap();
+  useEffect(() => {
+    if (props.currentIndex === props.index) {
+      moveMap([-75.165222, 39.952583], "Philadelphia");
+    }
+  }, [props.currentIndex]);
+
   return (
-    <div className={styles.s1_welcome}>
+    <div className={styles.main}>
       <h1>Welcome to my website!</h1>
       <p>
         I hope you enjoy your stay. My name is Zach and this is my personal web
@@ -26,4 +38,4 @@ function Section1(props) {
   );
 }
 
-export default Section1;
+export default Index;
