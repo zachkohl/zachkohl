@@ -1,5 +1,5 @@
 import "../lib/app.css";
-
+import "../lib/mapbox.css";
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }

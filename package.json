@@ -13,6 +13,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scrollama": "^2.2.10",
+    "sass": "^1.26.9",
     "scrollama": "^2.2.1",
     "typescript": "^3.9.5"
   },

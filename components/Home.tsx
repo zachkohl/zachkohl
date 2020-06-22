@@ -8,7 +8,7 @@ import ChangeColor from "./ChangeColor";
 import Scrolly from "./Scrolly";
 import Header from "./Header";
 import * as mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
-import mapStyles from "./mapStyle.module.css";
+//import mapStyles from "./mapStyle.module.css";
 var map;
 export const MapContext = React.createContext(map);
 
@@ -139,6 +139,7 @@ function Home(props) {
           </div>
           <div className={styles.rightSideBar}>
             <div className={styles.mapWrapper}>
+              {" "}
               <div id="mapbox" className={styles.mapCss}></div>
             </div>
           </div>
