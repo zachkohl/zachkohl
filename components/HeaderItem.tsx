@@ -12,11 +12,9 @@ function HeaderItem(props) {
 
   return (
     <span onMouseEnter={onEnterHandler} onMouseLeave={onLeaveHandler}>
-      <Link href={props.url}>
-        <a target="blank">
-          <img src={props.image} className={myStyle} />
-        </a>
-      </Link>
+      <a target="blank" href={props.url}>
+        <img src={props.image} className={myStyle} />
+      </a>
     </span>
   );
 }

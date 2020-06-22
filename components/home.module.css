@@ -10,7 +10,6 @@
   flex-direction: row;
   justify-content: flex-end;
   margin: 0;
-
 }
 
 .topOfNav {
@@ -44,7 +43,8 @@
 
 .mapCss {
   position: fixed;
-
+  width: 100%;
+  height: 100%;
 }
 
 .highlightedHeader {
@@ -68,7 +68,6 @@
 .rightSideBar {
   background-color: rgb(91, 93, 56);
   padding: 0;
-
 }
 
 .footer {
@@ -103,7 +102,6 @@
   padding: 1rem;
   font-size: 1.5rem;
 }
-
 
 .s1_welcome {
   height: 50vh;

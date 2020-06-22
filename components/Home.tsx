@@ -8,6 +8,7 @@ import ChangeColor from "./ChangeColor";
 import Scrolly from "./Scrolly";
 import Header from "./Header";
 import * as mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
+import mapStyles from "./mapStyle.module.css";
 var map;
 export const MapContext = React.createContext(map);
 
@@ -126,6 +127,9 @@ function Home(props) {
   return (
     <MapContext.Provider value={map}>
       <div className={styles.home}>
+        <div className={styles.header}>
+          <Header />
+        </div>
         <div className={styles.contentArea}>
           <div className={styles.bigArea}>
             <Scrolly
@@ -134,9 +138,6 @@ function Home(props) {
             />
           </div>
           <div className={styles.rightSideBar}>
-            <div className={styles.header}>
-              <Header />
-            </div>
             <div className={styles.mapWrapper}>
               <div id="mapbox" className={styles.mapCss}></div>
             </div>
@@ -148,35 +149,3 @@ function Home(props) {
 }
 
 export default Home;
-//{
-/* 
-
-    <div className={styles.home}>
-      <div className={styles.header}>f</div>
-      <div className={styles.contentArea}>
-        <div className={styles.bigArea}>
-          <Scrollama onStepEnter={onStepEnter} debug>
-            <Step data={1} key={1}>
-              <div className={styles.blue}>
-                <Section1 currentStepIndex={currentStepIndex} />
-              </div>
-            </Step>
-            <Step data={2} key={2}>
-              <div className={styles.red}>
-                <Section2 currentStepIndex={currentStepIndex} />
-              </div>
-            </Step>
-          </Scrollama>
-        </div>
-        <div className={styles.rightSideBar}></div>
-      </div>
-    </div>
-
-
-
-
-</div>
-
-<div className={styles.footer}></div>
-</div> */
-//}
