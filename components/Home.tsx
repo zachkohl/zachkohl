@@ -126,21 +126,23 @@ function Home(props) {
 
   return (
     <MapContext.Provider value={map}>
-      <div className={styles.home}>
-        <div className={styles.header}>
-          <Header />
-        </div>
-        <div className={styles.contentArea}>
-          <div className={styles.bigArea}>
-            <Scrolly
-              currentIndex={currentIndex}
-              setCurrentIndex={setCurrentIndex}
-            />
-          </div>
-          <div className={styles.rightSideBar}>
-            <div className={styles.mapWrapper}>
-              {" "}
-              <div id="mapbox" className={styles.mapCss}></div>
+      <div className={styles.header}>
+        <Header />
+      </div>
+      <div>
+        <div className={styles.home}>
+          <div className={styles.contentArea}>
+            <div className={styles.bigArea}>
+              <Scrolly
+                currentIndex={currentIndex}
+                setCurrentIndex={setCurrentIndex}
+              />
+            </div>
+            <div className={styles.rightSideBar}>
+              <div className={styles.mapWrapper}>
+                {" "}
+                <div id="mapbox" className={styles.mapCss}></div>
+              </div>
             </div>
           </div>
         </div>

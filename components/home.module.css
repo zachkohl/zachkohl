@@ -57,7 +57,7 @@
   background-color: red;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 10fr 2fr;
+  grid-template-columns: 1fr 320px;
 }
 
 .bigArea {
