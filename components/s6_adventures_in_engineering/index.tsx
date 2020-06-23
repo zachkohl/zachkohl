@@ -82,6 +82,12 @@ function Index(props) {
         including a full educational platform to help with a federal research
         project and also a tariff calculation tool for a custom house brokerage.
       </p>
+      <img
+        src="\Capture.PNG"
+        alt="IOT sensor"
+        height="200px"
+        className="rotate"
+      />
       <style jsx={true}>
         {`
           #s6 {

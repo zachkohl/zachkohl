@@ -34,6 +34,21 @@ function Index(props) {
         the scuba tank.” See, early on I had a basic understanding that
         technology can be used to solve difficult problems.
       </p>
+      <figure style={{ display: "block" }}>
+        <img src="/suba.jpg" alt="suba picture" width="400px" />
+        <figcaption>
+          <span>
+            Photo by{" "}
+            <a href="https://unsplash.com/@josephnorthcutt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+              Joseph Northcutt
+            </a>{" "}
+            on{" "}
+            <a href="/s/photos/diving?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+              Unsplash
+            </a>
+          </span>
+        </figcaption>
+      </figure>
     </div>
   );
 }

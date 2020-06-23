@@ -109,3 +109,7 @@
 .title {
   font-size: 3em;
 }
+
+.image {
+  display: block;
+}

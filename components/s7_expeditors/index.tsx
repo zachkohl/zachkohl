@@ -54,6 +54,10 @@ function Index(props) {
       <p>
         That’s a bit of my story, feel free to reach out if you wanna talk more.
       </p>
+      <figure className="floatMe">
+        <img src="\future.PNG" alt="javascript" width="500px" />
+        <figcaption>Now I write a lot of javaScript</figcaption>
+      </figure>
       <style jsx={true}>
         {`
           #s7 {

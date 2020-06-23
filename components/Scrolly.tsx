@@ -30,6 +30,7 @@ function Scrolly(props) {
 
       // add to color to current step
       props.setCurrentIndex(response.index);
+      console.log(response.index);
     }
 
     function handleStepProgress(response) {
@@ -53,7 +54,7 @@ function Scrolly(props) {
       scroller
         .setup({
           step: "#scrolly article .step",
-          debug: false,
+          debug: true,
           offset: 0.9,
           progress: true,
         })
@@ -73,7 +74,7 @@ function Scrolly(props) {
       window.removeEventListener("resize", scroller.resize);
     };
   }, []);
-
+  const vh = "50vh";
   return (
     <div>
       {" "}
@@ -126,7 +127,7 @@ function Scrolly(props) {
             index={7}
             progress={progress}
           />
-          <div className="step" style={{ height: "100vh" }} data-step="8"></div>
+          <div className="step" style={{ height: "30vh" }} data-step="8"></div>
         </article>
       </section>
     </div>

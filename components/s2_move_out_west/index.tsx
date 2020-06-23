@@ -47,11 +47,20 @@ function Section2(props) {
         going into IT, and studied hard for the A+ exam, but then I life got
         going and I started to pursue other adventures.
       </p>
+      <figure className="floatMe" style={{ display: "block" }}>
+        <img src="\mooseweavepolesc.jpg" alt="suba picture" width="400px" />
+        <figcaption>
+          <span>Some nieghbors. These things happen out this way.</span>
+        </figcaption>
+      </figure>
       <style jsx={true}>
         {`
           #s2 {
             transform: rotate(${titleRotate}turn);
             transform-origin: bottom right;
+            float: right;
+          }
+          .floatMe {
             float: right;
           }
         `}

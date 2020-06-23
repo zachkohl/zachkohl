@@ -51,12 +51,26 @@ function Index(props) {
         to see working hard even when no one is looking as a big part of having
         integrity.
       </p>
+      <figure className="floatMe" style={{ display: "block" }}>
+        <img
+          src="\56c5d64a6e97c619008b7eaf.png"
+          alt="suba picture"
+          width="400px"
+        />
+        <figcaption>
+          <span>Some pic I took while waltzing around a training exercise</span>
+        </figcaption>
+      </figure>
       <style jsx={true}>
         {`
           #s3 {
             transform: rotate(${titleRotate}turn);
             transform-origin: bottom right;
             float: right;
+          }
+          .floatMe {
+            float: left;
+            display: block;
           }
         `}
       </style>
