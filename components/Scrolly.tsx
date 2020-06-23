@@ -54,7 +54,7 @@ function Scrolly(props) {
       scroller
         .setup({
           step: "#scrolly article .step",
-          debug: true,
+          debug: false,
           offset: 0.9,
           progress: true,
         })
