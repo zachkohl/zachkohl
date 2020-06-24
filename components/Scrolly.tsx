@@ -201,7 +201,7 @@ function Scrolly(props) {
               progress={progress}
             />
           </div>
-          <div className="step" data-step="6"></div>
+          <div className="step" data-step="5"></div>
           <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
             <S5_playing_jounalist
               currentIndex={scrollRef.current.currentIndex}
@@ -209,7 +209,7 @@ function Scrolly(props) {
               progress={progress}
             />
           </div>
-          <div className="step" data-step="7"></div>
+          <div className="step" data-step="6"></div>
           <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
             <S6_adventures_in_engineering
               currentIndex={scrollRef.current.currentIndex}
@@ -217,7 +217,7 @@ function Scrolly(props) {
               progress={progress}
             />
           </div>
-          <div className="step" data-step="8"></div>
+          <div className="step" data-step="7"></div>
           <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
             <S7_expeditors
               currentIndex={scrollRef.current.currentIndex}
