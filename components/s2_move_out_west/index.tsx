@@ -6,28 +6,30 @@ import useMoveMap from "../useMoveMap";
 function Section2(props) {
   const [titleRotate, setTitleRotate] = useState(-0.25);
 
-  useEffect(() => {
-    //calculate the title location.
-    if (props.currentIndex === props.index) {
-      const rotateValue = props.progress - 1.25;
-      if (rotateValue < -1) {
-        setTitleRotate(rotateValue);
-      } else {
-        setTitleRotate(0);
-      }
-    } else if (props.currentIndex > props.index) {
-      setTitleRotate(0);
-    } else {
-      setTitleRotate(-0.25);
-    }
-  }, [props.progress]);
+  // useEffect(() => {
+  //   //calculate the title location.
+  //   console.log(props.currentIndex);
+  //   console.log(props.index);
+  //   if (props.currentIndex === props.index) {
+  //     const rotateValue = props.progress - 1.25;
+  //     if (rotateValue < -1) {
+  //       setTitleRotate(rotateValue);
+  //     } else {
+  //       setTitleRotate(0);
+  //     }
+  //   } else if (props.currentIndex > props.index) {
+  //     setTitleRotate(0);
+  //   } else {
+  //     setTitleRotate(-0.25);
+  //   }
+  // }, [props.progress]);
 
-  const moveMap = useMoveMap();
-  useEffect(() => {
-    if (props.currentIndex === props.index) {
-      moveMap([-116.79253, 47.703485], "Pacific North West");
-    }
-  }, [props.currentIndex]);
+  // const moveMap = useMoveMap();
+  // useEffect(() => {
+  //   if (props.currentIndex === props.index) {
+  //     moveMap([-116.79253, 47.703485], "Pacific North West");
+  //   }
+  // }, [props.currentIndex]);
 
   const myStyle =
     props.currentIndex === props.index ? homeStyles.red : homeStyles.blue;
@@ -53,7 +55,7 @@ function Section2(props) {
           <span>Some nieghbors. These things happen out this way.</span>
         </figcaption>
       </figure>
-      <style jsx={true}>
+      {/* <style jsx={true}>
         {`
           #s2 {
             transform: rotate(${titleRotate}turn);
@@ -64,7 +66,7 @@ function Section2(props) {
             float: right;
           }
         `}
-      </style>
+      </style> */}
     </div>
   );
 }

@@ -6,33 +6,33 @@ import useMoveMap from "../useMoveMap";
 function Index(props) {
   const [titleRotate, setTitleRotate] = useState(-0.25);
 
-  useEffect(() => {
-    //calculate the title location.
-    if (props.currentIndex === props.index) {
-      const rotateValue = props.progress - 1.25;
-      if (rotateValue < -1) {
-        setTitleRotate(rotateValue);
-      } else {
-        setTitleRotate(0);
-      }
-    } else if (props.currentIndex > props.index) {
-      setTitleRotate(0);
-    } else {
-      setTitleRotate(-0.25);
-    }
-  }, [props.progress]);
+  // useEffect(() => {
+  //   //calculate the title location.
+  //   if (props.currentIndex === props.index) {
+  //     const rotateValue = props.progress - 1.25;
+  //     if (rotateValue < -1) {
+  //       setTitleRotate(rotateValue);
+  //     } else {
+  //       setTitleRotate(0);
+  //     }
+  //   } else if (props.currentIndex > props.index) {
+  //     setTitleRotate(0);
+  //   } else {
+  //     setTitleRotate(-0.25);
+  //   }
+  // }, [props.progress]);
 
-  const moveMap = useMoveMap();
-  useEffect(() => {
-    if (props.currentIndex === props.index) {
-      moveMap([70.4578, 34.4284], "Afghanistan");
-    }
-  }, [props.currentIndex]);
+  // const moveMap = useMoveMap();
+  // useEffect(() => {
+  //   if (props.currentIndex === props.index) {
+  //     moveMap([70.4578, 34.4284], "Afghanistan");
+  //   }
+  // }, [props.currentIndex]);
 
   return (
     <div>
       <div className={styles.title} id="s4">
-        Learning about other cultures: Afghanistan
+        Afghanistan
       </div>
       <p>
         I did get the honor of visiting Afghanistan. That country changed my
@@ -71,7 +71,7 @@ function Index(props) {
         className={styles.image}
       />
 
-      <style jsx={true}>
+      {/* <style jsx={true}>
         {`
           #s4 {
             transform: rotate(${titleRotate}turn);
@@ -79,7 +79,7 @@ function Index(props) {
             float: right;
           }
         `}
-      </style>
+      </style> */}
     </div>
   );
 }

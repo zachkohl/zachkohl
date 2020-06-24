@@ -47,51 +47,51 @@ var easingFunctions = {
 function Home(props) {
   const [currentIndex, setCurrentIndex] = useState(null);
 
-  useEffect(() => {
-    mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX;
-    map = new mapboxgl.Map({
-      container: "mapbox",
-      style: "mapbox://styles/mapbox/streets-v11",
-      center: [-75, 39],
-      zoom: 3,
-    });
-    map.on("load", function () {
-      // add a layer to display the map's center point
-      map.addSource("center", {
-        type: "geojson",
-        data: {
-          type: "Point",
-          coordinates: [-75.165222, 39.952583],
-        },
-      });
-      map.addLayer({
-        id: "center",
-        type: "symbol",
-        source: "center",
-        layout: {
-          "icon-image": "marker-15",
-          "text-field": "Philadelphia",
-          "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-          "text-offset": [0, 0.6],
-          "text-anchor": "top",
-        },
-      });
-    });
-    //   map.flyTo(animationOptions);
-    // var center = [
-    //   -95 + (Math.random() - 0.5) * 20,
-    //   40 + (Math.random() - 0.5) * 20,
-    // ];
-    // map.getSource("center").setData({
-    //   type: "Point",
-    //   coordinates: center,
-    // });
-    // map.setLayoutProperty(
-    //   "center",
-    //   "text-field",
-    //   "Center: [" + center[0].toFixed(1) + ", " + center[1].toFixed(1) + "]"
-    // );
-  }, []);
+  // useEffect(() => {
+  //   mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX;
+  //   map = new mapboxgl.Map({
+  //     container: "mapbox",
+  //     style: "mapbox://styles/mapbox/streets-v11",
+  //     center: [-75, 39],
+  //     zoom: 3,
+  //   });
+  //   map.on("load", function () {
+  //     // add a layer to display the map's center point
+  //     map.addSource("center", {
+  //       type: "geojson",
+  //       data: {
+  //         type: "Point",
+  //         coordinates: [-75.165222, 39.952583],
+  //       },
+  //     });
+  //     map.addLayer({
+  //       id: "center",
+  //       type: "symbol",
+  //       source: "center",
+  //       layout: {
+  //         "icon-image": "marker-15",
+  //         "text-field": "Philadelphia",
+  //         "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+  //         "text-offset": [0, 0.6],
+  //         "text-anchor": "top",
+  //       },
+  //     });
+  //   });
+  //   map.flyTo(animationOptions);
+  // var center = [
+  //   -95 + (Math.random() - 0.5) * 20,
+  //   40 + (Math.random() - 0.5) * 20,
+  // ];
+  // map.getSource("center").setData({
+  //   type: "Point",
+  //   coordinates: center,
+  // });
+  // map.setLayoutProperty(
+  //   "center",
+  //   "text-field",
+  //   "Center: [" + center[0].toFixed(1) + ", " + center[1].toFixed(1) + "]"
+  // );
+  // }, []);
 
   function onClickHandler(e) {
     var offsetX = parseInt("0", 10);

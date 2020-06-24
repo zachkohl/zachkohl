@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./home.module.css";
 import Section1 from "./s1_welcome";
 import Section2 from "./Section2/Section2";
@@ -14,8 +14,16 @@ import S5_playing_jounalist from "./s5_playing_journalist";
 import S6_adventures_in_engineering from "./s6_adventures_in_engineering";
 import S7_expeditors from "./s7_expeditors";
 import MapMover from "./MapMover";
+import useMoveMap from "./useMoveMap";
 function Scrolly(props) {
+  const scrollRef = useRef({
+    currentIndex: 0,
+    progress: 0,
+  });
   const [progress, setProgress] = useState(null);
+  const [loadingComplete, setLoadingComplete] = useState(false);
+  const [titleRotate, setTitleRotate] = useState(-0.25);
+  const moveMap = useMoveMap();
   useEffect(() => {
     var scrolly = document.querySelector("#scrolly");
     var article = scrolly.querySelector("article");
@@ -27,13 +35,54 @@ function Scrolly(props) {
     // scrollama event handlers
     function handleStepEnter(response) {
       // response = { element, direction, index }
+      console.log(response);
+      if (response.index === 1 && response.direction === "up") {
+        console.log("philly");
+        moveMap([-75.165222, 39.952583], "Philadelphia");
+      }
+      if (
+        (response.index === 1 && response.direction === "down") ||
+        (response.index === 2 && response.direction === "up")
+      ) {
+        console.log("northwest");
+        moveMap([-116.79253, 47.703485], "Pacific North West");
+      }
+      if (
+        (response.index === 2 && response.direction === "down") ||
+        (response.index === 3 && response.direction === "up")
+      ) {
+        moveMap([-84.8229, 32.3913], "Army Land");
+      }
+      if (
+        (response.index === 3 && response.direction === "down") ||
+        (response.index === 4 && response.direction === "up")
+      ) {
+        moveMap([70.4578, 34.4284], "Afghanistan");
+      }
+      if (
+        (response.index === 4 && response.direction === "down") ||
+        (response.index === 5 && response.direction === "up")
+      ) {
+        moveMap([-158.0627, 21.4955], "Hawaii");
+      }
+      if (
+        (response.index === 5 && response.direction === "down") ||
+        (response.index === 6 && response.direction === "up")
+      ) {
+        moveMap([-117.0126, 46.7288], "The place I took a lot of math classes");
+      }
+      if (response.index === 6 && response.direction === "down") {
+        moveMap([-117.5933, 47.6446], "Where I work now");
+      }
 
       // add to color to current step
       props.setCurrentIndex(response.index);
+      scrollRef.current.currentIndex = response.index;
       console.log(response.index);
     }
 
     function handleStepProgress(response) {
+      scrollRef.current.progress = response.progress;
       setProgress(response.progress);
     }
 
@@ -74,60 +123,108 @@ function Scrolly(props) {
       window.removeEventListener("resize", scroller.resize);
     };
   }, []);
-  const vh = "50vh";
+
+  // useEffect(() => {
+  //   if (props.currentIndex === 0) {
+  //     moveMap([-75.165222, 39.952583], "Philadelphia");
+  //   }
+  //   if (props.currentIndex === 1) {
+  //     moveMap([-116.79253, 47.703485], "Pacific North West");
+  //   }
+  //   if (props.currentIndex === 3) {
+  //     moveMap([-84.8229, 32.3913], "Army Land");
+  //   }
+  //   if (props.currentIndex === 4) {
+  //     moveMap([70.4578, 34.4284], "Afghanistan");
+  //   }
+  //   if (props.currentIndex === 5) {
+  //     moveMap([-158.0627, 21.4955], "Hawaii");
+  //   }
+  //   if (props.currentIndex === 6) {
+  //     moveMap([-117.0126, 46.7288], "The place I took a lot of math classes");
+  //   }
+  //   if (props.currentIndex === 7) {
+  //     moveMap([-117.5933, 47.6446], "Where I work now");
+  //   }
+  // }, [props.currentIndex]);
+
+  // useEffect(() => {
+  //   //calculate the title location.
+  //   if (props.currentIndex === props.index) {
+  //     const rotateValue = props.progress - 1.25;
+  //     if (rotateValue < -1) {
+  //       setTitleRotate(rotateValue);
+  //     } else {
+  //       setTitleRotate(0);
+  //     }
+  //   } else if (props.currentIndex > props.index) {
+  //     setTitleRotate(0);
+  //   } else {
+  //     setTitleRotate(-0.25);
+  //   }
+  // }, [props.progress]);
+
   return (
     <div>
       {" "}
       <section id="scrolly">
         <article>
-          <div className="step" data-step="1">
+          <div className="step" data-step="1"></div>
+          <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
             <S1_welcome
-              currentIndex={props.currentIndex}
+              currentIndex={scrollRef.current.currentIndex}
               index={1}
               progress={progress}
-              title="welcome"
+            />
+          </div>{" "}
+          <div className="step" data-step="2"></div>
+          <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
+            <S2_move_out_west
+              currentIndex={scrollRef.current.currentIndex}
+              index={2}
+              progress={progress}
             />
           </div>
-          <div className="step" data-step="2"></div>
-          <S2_move_out_west
-            currentIndex={props.currentIndex}
-            index={2}
-            progress={progress}
-            title="welcome"
-          />
-
-          <div className="step" style={{ height: "100vh" }} data-step="3"></div>
-          <S3_military_service
-            currentIndex={props.currentIndex}
-            index={3}
-            progress={progress}
-          />
-          <div className="step" style={{ height: "100vh" }} data-step="4"></div>
-          <S4_afghanistan
-            currentIndex={props.currentIndex}
-            index={4}
-            progress={progress}
-          />
-          <div className="step" style={{ height: "100vh" }} data-step="5"></div>
-          <S5_playing_jounalist
-            currentIndex={props.currentIndex}
-            index={5}
-            progress={progress}
-          />
-          <div className="step" style={{ height: "100vh" }} data-step="6"></div>
-          <S6_adventures_in_engineering
-            currentIndex={props.currentIndex}
-            index={6}
-            progress={progress}
-          />
-
-          <div className="step" style={{ height: "100vh" }} data-step="7"></div>
-          <S7_expeditors
-            currentIndex={props.currentIndex}
-            index={7}
-            progress={progress}
-          />
-          <div className="step" style={{ height: "30vh" }} data-step="8"></div>
+          <div className="step" data-step="3"></div>
+          <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
+            <S3_military_service
+              currentIndex={scrollRef.current.currentIndex}
+              index={3}
+              progress={progress}
+            />
+          </div>
+          <div className="step" data-step="4"></div>
+          <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
+            <S4_afghanistan
+              currentIndex={scrollRef.current.currentIndex}
+              index={5}
+              progress={progress}
+            />
+          </div>
+          <div className="step" data-step="6"></div>
+          <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
+            <S5_playing_jounalist
+              currentIndex={scrollRef.current.currentIndex}
+              index={7}
+              progress={progress}
+            />
+          </div>
+          <div className="step" data-step="7"></div>
+          <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
+            <S6_adventures_in_engineering
+              currentIndex={scrollRef.current.currentIndex}
+              index={7}
+              progress={progress}
+            />
+          </div>
+          <div className="step" data-step="8"></div>
+          <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
+            <S7_expeditors
+              currentIndex={scrollRef.current.currentIndex}
+              index={8}
+              progress={progress}
+            />
+          </div>
         </article>
       </section>
     </div>

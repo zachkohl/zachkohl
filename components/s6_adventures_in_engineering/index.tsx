@@ -6,34 +6,32 @@ import useMoveMap from "../useMoveMap";
 function Index(props) {
   const [titleRotate, setTitleRotate] = useState(-0.25);
 
-  useEffect(() => {
-    //calculate the title location.
-    if (props.currentIndex === props.index) {
-      const rotateValue = props.progress - 1.25;
-      if (rotateValue < -1) {
-        setTitleRotate(rotateValue);
-      } else {
-        setTitleRotate(0);
-      }
-    } else if (props.currentIndex > props.index) {
-      setTitleRotate(0);
-    } else {
-      setTitleRotate(-0.25);
-    }
-  }, [props.progress]);
+  // useEffect(() => {
+  //   //calculate the title location.
+  //   if (props.currentIndex === props.index) {
+  //     const rotateValue = props.progress - 1.25;
+  //     if (rotateValue < -1) {
+  //       setTitleRotate(rotateValue);
+  //     } else {
+  //       setTitleRotate(0);
+  //     }
+  //   } else if (props.currentIndex > props.index) {
+  //     setTitleRotate(0);
+  //   } else {
+  //     setTitleRotate(-0.25);
+  //   }
+  // }, [props.progress]);
 
-  const moveMap = useMoveMap();
-  useEffect(() => {
-    if (props.currentIndex === props.index) {
-      moveMap([-117.0126, 46.7288], "The place I took a lot of math classes");
-    }
-  }, [props.currentIndex]);
+  // const moveMap = useMoveMap();
+  // useEffect(() => {
+  //   if (props.currentIndex === props.index) {
+  //     moveMap([-117.0126, 46.7288], "The place I took a lot of math classes");
+  //   }
+  // }, [props.currentIndex]);
 
   return (
     <div>
-      <div className={styles.title} id="s6">
-        Adventures in Engineering!
-      </div>
+      <div className={styles.title}>Adventures in Engineering!</div>
       <p>
         While writing was pretty cool, I had this nagging feeling that I was
         still incomplete as a problem solver. Like I could write about problems,
@@ -88,7 +86,7 @@ function Index(props) {
         height="200px"
         className="rotate"
       />
-      <style jsx={true}>
+      {/* <style jsx={true}>
         {`
           #s6 {
             transform: rotate(${titleRotate}turn);
@@ -96,7 +94,7 @@ function Index(props) {
             float: right;
           }
         `}
-      </style>
+      </style> */}
     </div>
   );
 }

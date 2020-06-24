@@ -6,12 +6,12 @@ import useMoveMap from "../useMoveMap";
 function Index(props) {
   const [passed, setPassed] = useState(false);
 
-  const moveMap = useMoveMap();
-  useEffect(() => {
-    if (props.currentIndex === props.index) {
-      moveMap([-75.165222, 39.952583], "Philadelphia");
-    }
-  }, [props.currentIndex]);
+  // const moveMap = useMoveMap();
+  // useEffect(() => {
+  //   if (props.currentIndex === props.index) {
+  //     moveMap([-75.165222, 39.952583], "Philadelphia");
+  //   }
+  // }, [props.currentIndex]);
 
   return (
     <div className={styles.main}>
@@ -34,21 +34,23 @@ function Index(props) {
         the scuba tank.” See, early on I had a basic understanding that
         technology can be used to solve difficult problems.
       </p>
-      <figure style={{ display: "block" }}>
-        <img src="/suba.jpg" alt="suba picture" width="400px" />
-        <figcaption>
-          <span>
-            Photo by{" "}
-            <a href="https://unsplash.com/@josephnorthcutt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-              Joseph Northcutt
-            </a>{" "}
-            on{" "}
-            <a href="/s/photos/diving?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-              Unsplash
-            </a>
-          </span>
-        </figcaption>
-      </figure>
+
+      <img
+        src="/suba.jpg"
+        alt="suba picture"
+        width="400px"
+        className={styles.image}
+      />
+      <span>
+        Photo by{" "}
+        <a href="https://unsplash.com/@josephnorthcutt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+          Joseph Northcutt
+        </a>{" "}
+        on{" "}
+        <a href="/s/photos/diving?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+          Unsplash
+        </a>
+      </span>
     </div>
   );
 }

@@ -6,34 +6,32 @@ import useMoveMap from "../useMoveMap";
 function Index(props) {
   const [titleRotate, setTitleRotate] = useState(-0.25);
 
-  useEffect(() => {
-    //calculate the title location.
-    if (props.currentIndex === props.index) {
-      const rotateValue = props.progress - 1.25;
-      if (rotateValue < -1) {
-        setTitleRotate(rotateValue);
-      } else {
-        setTitleRotate(0);
-      }
-    } else if (props.currentIndex > props.index) {
-      setTitleRotate(0);
-    } else {
-      setTitleRotate(-0.25);
-    }
-  }, [props.progress]);
+  // useEffect(() => {
+  //   //calculate the title location.
+  //   if (props.currentIndex === props.index) {
+  //     const rotateValue = props.progress - 1.25;
+  //     if (rotateValue < -1) {
+  //       setTitleRotate(rotateValue);
+  //     } else {
+  //       setTitleRotate(0);
+  //     }
+  //   } else if (props.currentIndex > props.index) {
+  //     setTitleRotate(0);
+  //   } else {
+  //     setTitleRotate(-0.25);
+  //   }
+  // }, [props.progress]);
 
-  const moveMap = useMoveMap();
-  useEffect(() => {
-    if (props.currentIndex === props.index) {
-      moveMap([-158.0627, 21.4955], "Hawaii");
-    }
-  }, [props.currentIndex]);
+  // const moveMap = useMoveMap();
+  // useEffect(() => {
+  //   if (props.currentIndex === props.index) {
+  //     moveMap([-158.0627, 21.4955], "Hawaii");
+  //   }
+  // }, [props.currentIndex]);
 
   return (
     <div>
-      <div className={styles.title} id="s5">
-        Playing Journalist
-      </div>
+      <div className={styles.title}>Playing Journalist</div>
       <p>
         While I loved certain aspects of the Army, I never really fit in. It is
         hard to explain. I like being creative, learning new things, and
@@ -65,7 +63,7 @@ function Index(props) {
           Unsplash
         </a>
       </div>
-      <style jsx={true}>
+      {/* <style jsx={true}>
         {`
           #s5 {
             transform: rotate(${titleRotate}turn);
@@ -73,7 +71,7 @@ function Index(props) {
             float: right;
           }
         `}
-      </style>
+      </style> */}
     </div>
   );
 }

@@ -6,34 +6,32 @@ import useMoveMap from "../useMoveMap";
 function Index(props) {
   const [titleRotate, setTitleRotate] = useState(-0.25);
 
-  useEffect(() => {
-    //calculate the title location.
-    if (props.currentIndex === props.index) {
-      const rotateValue = props.progress - 1.25;
-      if (rotateValue < -1) {
-        setTitleRotate(rotateValue);
-      } else {
-        setTitleRotate(0);
-      }
-    } else if (props.currentIndex > props.index) {
-      setTitleRotate(0);
-    } else {
-      setTitleRotate(-0.25);
-    }
-  }, [props.progress]);
+  // useEffect(() => {
+  //   //calculate the title location.
+  //   if (props.currentIndex === props.index) {
+  //     const rotateValue = props.progress - 1.25;
+  //     if (rotateValue < -1) {
+  //       setTitleRotate(rotateValue);
+  //     } else {
+  //       setTitleRotate(0);
+  //     }
+  //   } else if (props.currentIndex > props.index) {
+  //     setTitleRotate(0);
+  //   } else {
+  //     setTitleRotate(-0.25);
+  //   }
+  // }, [props.progress]);
 
-  const moveMap = useMoveMap();
-  useEffect(() => {
-    if (props.currentIndex === props.index) {
-      moveMap([-84.8229, 32.3913], "Army Land");
-    }
-  }, [props.currentIndex]);
+  // const moveMap = useMoveMap();
+  // useEffect(() => {
+  //   if (props.currentIndex === props.index) {
+  //     moveMap([-84.8229, 32.3913], "Army Land");
+  //   }
+  // }, [props.currentIndex]);
 
   return (
     <div>
-      <div className={styles.title} id="s3">
-        Military Service: Learning soft skills
-      </div>
+      <div className={styles.title}>Military Service: Learning soft skills</div>
 
       <p>
         I wanted to serve my Country, so I entered ROTC at the University of
@@ -61,7 +59,7 @@ function Index(props) {
           <span>Some pic I took while waltzing around a training exercise</span>
         </figcaption>
       </figure>
-      <style jsx={true}>
+      {/* <style jsx={true}>
         {`
           #s3 {
             transform: rotate(${titleRotate}turn);
@@ -73,7 +71,7 @@ function Index(props) {
             display: block;
           }
         `}
-      </style>
+      </style> */}
     </div>
   );
 }
