@@ -8,6 +8,8 @@ import ChangeColor from "./ChangeColor";
 import Scrolly from "./Scrolly";
 import Header from "./Header";
 import * as mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
+import ReactGA from "react-ga";
+
 //import mapStyles from "./mapStyle.module.css";
 var map;
 export const MapContext = React.createContext(map);
@@ -123,6 +125,11 @@ function Home(props) {
       "Center: [" + center[0].toFixed(1) + ", " + center[1].toFixed(1) + "]"
     );
   }
+
+  useEffect(() => {
+    ReactGA.initialize(process.env.NEXT_PUBLIC_GA);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <MapContext.Provider value={map}>
