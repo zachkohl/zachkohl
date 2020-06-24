@@ -34,9 +34,9 @@ function Index(props) {
       <div className={styles.title}>Military Service: Learning soft skills</div>
 
       <p>
-        I wanted to serve my Country, so I entered ROTC at the University of
+        I wanted to serve my country, so I entered ROTC at the University of
         Idaho where I would earn a commission as an Infantry Officer. The Army
-        taught me a lot, things I still value in my career today. I learned
+        taught me a lot. Things I still value in my career today. I learned
         public speaking, how to make friends with people you don’t like, and the
         rigorous methods of military planning.
       </p>

@@ -50,7 +50,7 @@ function Index(props) {
         power corporation that I really started to see about transitioning. I
         was able, during the internship, to build a program for them that would
         calculate arc flash and produce industry valid safety labels. I was
-        hooked. Computers and programming where the way to go.
+        hooked. Computers and programming were the way to go.
       </p>
       <p>
         Another fun adventure in engineering school was working with my
@@ -59,18 +59,19 @@ function Index(props) {
         would transmit through cell phone networks and run off of solar power.
         The idea was to solve regulatory compliance issues for rural well
         owners. But then the laws changed, fundamentally effecting our business
-        model. But I had a lot of fun learning how to build an IoT sensor from
-        the ground up. We learned how to do surface mount soldering in a toaster
-        oven and also how to program microcontrollers in C.
+        model. However, I had a lot of fun learning how to build an IoT sensor
+        from the ground up. We learned how to do surface mount soldering in a
+        toaster oven and also how to program microcontrollers in C.
       </p>
       <p>
-        However, I found that I really liked building the cloud components.
-        Which is how I got into serious JavaScript programming.
+        I found that I really liked building the cloud components. Which is how
+        I got into serious JavaScript programming.
       </p>
       <p>
         JavaScript is very performant. Some local engineers at F5 really got me
-        excited about using the language in a serous way. Now with TypeScript, I
-        feel that JavaScript is ready to shine as the major work horse engine of
+        excited about using the language in a serous way as their company uses
+        NodeJS because of the preformance benefits. Now with TypeScript, I feel
+        that JavaScript is ready to shine as the major work horse language of
         the future. The ecosystem is getting mature and that means that problems
         can be solved faster.
       </p>

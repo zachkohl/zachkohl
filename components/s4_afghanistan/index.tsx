@@ -40,10 +40,11 @@ function Index(props) {
         an amazing unit with great leadership that understood the importance of
         actually talking with people, of learning as much about a situation
         before making rash decisions as possible, and when necessary, acting
-        decisively. It turned out that many of the previous units had never
-        taken the time to really get to know the locals, to learn their customs
-        and show them hospitality. We did, and we used this knowledge to start
-        to build an intelligence diagram that showed what was really going on.
+        decisively. It turned out that many of the previous units in our area
+        had never taken the time to really get to know the locals, to learn
+        their customs and show them hospitality. We did, and we used this
+        knowledge to start to build an intelligence diagram that showed what was
+        really going on.
       </p>
       <p>
         This process also started to re-kindle my fire for working with
@@ -51,17 +52,17 @@ function Index(props) {
         database that allowed us to store facts about the area as we learned
         them. As we learned what was going on, what the patterns of life where,
         we learned the real issues. Turned out it was not, at least in our area,
-        a struggle for ideological purity, but instead feud about water
+        a struggle for ideological purity, but instead a feud about water
         resources. This was a major revelation, one we used to our advantage. We
         really just wanted the place to be peaceful so we could leave, as such,
         we build wells and negated with different local leaders to find an end
-        to the violence. The results of this approach were miraculous, the local
-        Taliban commander actually switched sides! There was more to it than
-        this short paragraph can describe, but when I got to shake that man’s
-        hand, the man who had killed Americans whose funerals I personally
-        attended, it was a major experience in my life. It taught me a lot about
-        the power of listening, and also got me wondering what other problems
-        could be solved by efficiently applying information technology.
+        to the violence. The results of this approach were nothing short of
+        miraculous, the local Taliban commander actually switched sides! There
+        was more to it than this short paragraph can describe, but when I got to
+        shake that man’s hand, the man who had killed Americans whose funerals I
+        personally attended, it was a major experience in my life. It taught me
+        a lot about the power of listening, and also got me wondering what other
+        problems could be solved by efficiently applying information technology.
       </p>
 
       <img

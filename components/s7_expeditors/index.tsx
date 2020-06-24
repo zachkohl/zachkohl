@@ -40,8 +40,8 @@ function Index(props) {
         stack development on a series of tools to help with auditing and
         recovery orchestration in the event that something happens to our main
         facility in Seattle. A lot of America’s international trade goes through
-        that office, and making sure that that trade is disaster proof is a
-        mission I take very seriously.
+        that office, and making sure that that is disaster proof is a mission I
+        take very seriously.
       </p>
       <p>
         Another great thing about working at Expeditors has been the ability to

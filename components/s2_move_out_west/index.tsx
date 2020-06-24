@@ -46,8 +46,8 @@ function Section2(props) {
         with her German Shepherd business. Her Christmas present one year was a
         CSS powered dropdown menu. Also, I naturally had to learn basic IT
         skills to help with my gaming habit. I started to flirt with the idea of
-        going into IT, and studied hard for the A+ exam, but then I life got
-        going and I started to pursue other adventures.
+        going into IT, and studied hard for the A+ exam, but then life got going
+        and I started to pursue other adventures.
       </p>
       <figure className="floatMe" style={{ display: "block" }}>
         <img src="\mooseweavepolesc.jpg" alt="suba picture" width="400px" />
