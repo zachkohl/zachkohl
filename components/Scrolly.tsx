@@ -12,7 +12,7 @@ import S3_military_service from "./s3_military_service";
 import S4_afghanistan from "./s4_afghanistan";
 import S5_playing_jounalist from "./s5_playing_journalist";
 import S6_adventures_in_engineering from "./s6_adventures_in_engineering";
-import S7_expeditors from "./s7_expeditors";
+import S7_professionaltechwork from "./s7_professionaltechwork";
 import MapMover from "./MapMover";
 import useMoveMap from "./useMoveMap";
 function Scrolly(props) {
@@ -72,7 +72,7 @@ function Scrolly(props) {
         moveMap([-117.0126, 46.7288], "The place I took a lot of math classes");
       }
       if (response.index === 6 && response.direction === "down") {
-        moveMap([-117.5933, 47.6446], "Where I work now");
+        moveMap([-116.708, 47.948], "Where I work now");
       }
 
       // add to color to current step
@@ -219,7 +219,7 @@ function Scrolly(props) {
           </div>
           <div className="step" data-step="7"></div>
           <div style={{ minHeight: "100vh", backgroundColor: "white" }}>
-            <S7_expeditors
+            <S7_professionaltechwork
               currentIndex={scrollRef.current.currentIndex}
               index={8}
               progress={progress}
